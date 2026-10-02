@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quest of Legends</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="start-page">
+        <h1>Quest of Legends</h1>
+        <p class="subtitle">A Fantasy Adventure</p>
+        <button id="start-btn">Start Game</button>
+        <button id="instructions-btn">How to Play</button>
+    </div>
+
+    <div id="game-container" style="display: none;">
+        <div id="character-creation">
+            <h2>Create Your Hero</h2>
+            
+            <label for="player-name">Enter Your Name:</label>
+            <input type="text" id="player-name" placeholder="Hero name" maxlength="20">
+            
+            <h3>Choose Your Class:</h3>
+            <div class="class-selection">
+                <div class="class-option" data-class="warrior">
+                    <h4>⚔️ Warrior</h4>
+                    <p>HP: 200 | Attack: 20 | Defense: 15</p>
+                </div>
+                <div class="class-option" data-class="mage">
+                    <h4>🔮 Mage</h4>
+                    <p>HP: 80 | Attack: 20 | Defense: 5</p>
+                </div>
+                <div class="class-option" data-class="archer">
+                    <h4>🏹 Archer</h4>
+                    <p>HP: 100 | Attack: 18 | Defense: 7</p>
+                </div>
+                <div class="class-option" data-class="overlord">
+                    <h4>🔥 Overlord</h4>
+                    <p>HP: 300 | Attack: 50 | Defense: 20</p>
+                </div>
+                <div class="class-option" data-class="grandmaster">
+                    <h4>🧝 Grandmaster</h4>
+                    <p>HP: 250 | Attack: 500 | Defense: 500</p>
+                </div>
+            </div>
+            
+            <button id="create-character-btn" disabled>Create Character</button>
+            <p id="error-msg" style="color: #e76f51;"></p>
+        </div>
+        
+        <div id="game-screen" style="display: none;">
+            <div id="hud">
+                <div class="hud-section">
+                    <h3 id="character-info"></h3>
+                </div>
+                
+                <div class="hud-section">
+                    <div class="stat-row">
+                        <span>HP:</span>
+                        <div class="health-bar-container">
+                            <div id="health-bar"></div>
+                        </div>
+                        <span id="hp-text">100/100</span>
+                    </div>
+                </div>
+                
+                <div class="hud-section stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-label">⚔️ Attack:</span>
+                        <span id="attack-stat">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">🛡️ Defense:</span>
+                        <span id="defense-stat">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">💰 Gold:</span>
+                        <span id="gold-stat">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">⭐ Level:</span>
+                        <span id="level-stat">1</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="game-content">
+                <h2 id="welcome-msg"></h2>
+                
+                <div id="battle-area" style="display: none;">
+                    <div id="enemy-info">
+                        <h3 id="enemy-name">Goblin</h3>
+                        <div class="enemy-health-bar-container">
+                            <div id="enemy-health-bar"></div>
+                        </div>
+                        <p id="enemy-hp-text">30/30</p>
+                    </div>
+                    
+                    <div id="battle-log">
+                        <p id="battle-message">A wild enemy appears!</p>
+                    </div>
+                    
+                    <div id="battle-actions">
+                        <button id="attack-btn">⚔️ Attack</button>
+                        <button id="defend-btn">🛡️ Defend</button>
+                        <button id="run-btn">🏃 Run</button>
+                    </div>
+                </div>
+                
+                <div id="exploration-area">
+                    <p>What would you like to do?</p>
+                    <button id="explore-btn">🗺️ Explore</button>
+                    <button id="rest-btn">💤 Rest (Restore HP)</button>
+                    <button id="save-btn">🖨️ Save Game</button>
+                    <button id="load-btn">📂 Load Game</button>
+                </div>
+                
+                <div id="game-over-screen" style="display: none;">
+                    <h2 style="color: #e74c3c;">Game Over</h2>
+                    <p id="game-over-message"></p>
+                    <button id="restart-btn">Play Again</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

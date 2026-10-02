@@ -1,0 +1,290 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1a1a2e;
+    color: #eee;
+    text-align: center;
+}
+
+#start-page {
+    padding-top: 100px;
+}
+
+h1 {
+    font-size: 48px;
+    color: #f4a261;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 20px;
+    color: #aaa;
+    margin-bottom: 40px;
+}
+
+button {
+    font-size: 18px;
+    padding: 15px 30px;
+    margin: 10px;
+    background-color: #e76f51;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #f4a261;
+}
+
+button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+}
+
+#character-creation {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+h2 {
+    color: #f4a261;
+    font-size: 36px;
+}
+
+h3 {
+    color: #eee;
+    margin-top: 30px;
+}
+
+label {
+    display: block;
+    margin: 20px 0 10px 0;
+    font-size: 18px;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #e76f51;
+    border-radius: 5px;
+    background-color: #16213e;
+    color: #eee;
+}
+
+.class-selection {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    gap: 15px;
+}
+
+.class-option {
+    background-color: #16213e;
+    border: 3px solid #555;
+    border-radius: 10px;
+    padding: 15px;
+    cursor: pointer;
+    flex: 1;
+    transition: all 0.3s;
+}
+
+.class-option:hover {
+    border-color: #f4a261;
+    transform: scale(1.05);
+}
+
+.class-option.selected {
+    border-color: #e76f51;
+    background-color: #243447;
+}
+
+.class-option h4 {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+    color: #f4a261;
+}
+
+.class-option p {
+    margin: 0;
+    font-size: 14px;
+    color: #aaa;
+}
+
+#error-msg {
+    min-height: 20px;
+    margin-top: 10px;
+}
+
+#game-screen {
+    padding: 20px;
+}
+
+#hud {
+    background-color: #16213e;
+    border: 2px solid #e76f51;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 0 auto 30px auto;
+    max-width: 700px;
+}
+
+.hud-section {
+    margin-bottom: 15px;
+}
+
+.hud-section:last-child {
+    margin-bottom: 0;
+}
+
+#character-info {
+    margin: 0;
+    color: #f4a261;
+    font-size: 24px;
+    text-align: center;
+}
+
+.stat-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.stat-row > span:first-child {
+    min-width: 35px;
+    font-weight: bold;
+}
+
+.health-bar-container {
+    flex: 1;
+    height: 25px;
+    background-color: #0f1419;
+    border: 2px solid #555;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#health-bar {
+    height: 100%;
+    background-color: #2ecc71;
+    width: 100%;
+    transition: width 0.3s, background-color 0.3s;
+}
+
+#hp-text {
+    min-width: 80px;
+    text-align: right;
+    font-weight: bold;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    background-color: #0f1419;
+    border-radius: 5px;
+}
+
+.stat-label {
+    font-weight: bold;
+    color: #aaa;
+}
+
+#game-content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#battle-area {
+    background-color: #16213e;
+    border: 2px solid #e76f51;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+#enemy-info {
+    margin-bottom: 20px;
+}
+
+#enemy-name {
+    color: #e74c3c;
+    font-size: 28px;
+    margin: 0 0 10px 0;
+}
+
+.enemy-health-bar-container {
+    height: 20px;
+    background-color: #0f1419;
+    border: 2px solid #555;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 10px auto;
+    max-width: 400px;
+}
+
+#enemy-health-bar {
+    height: 100%;
+    background-color: #e74c3c;
+    width: 100%;
+    transition: width 0.3s;
+}
+
+#enemy-hp-text {
+    color: #aaa;
+    font-size: 16px;
+}
+
+#battle-log {
+    background-color: #0f1419;
+    border: 2px solid #555;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 20px 0;
+    min-height: 60px;
+}
+
+#battle-message {
+    margin: 0;
+    font-size: 18px;
+    color: #f4a261;
+}
+
+#battle-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#exploration-area {
+    margin: 30px auto;
+}
+
+#exploration-area button {
+    margin: 10px;
+}
+
+#game-over-screen {
+    margin: 50px auto;
+}
+
+#game-over-screen h2 {
+    font-size: 48px;
+}
+
+#game-over-message {
+    font-size: 20px;
+    margin: 20px 0;
+}
